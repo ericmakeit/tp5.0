@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<base href="http://localhost/" />
+<title>新增用户</title>
+  <!--//Thinkphp5.0版本专有写法，{load href="" /}亦可-->
+  {css href="/static/css/pintuer.css" /}
+  {css href="/static/css/admin.css" /}
+  {css href="/static/layui/css/layui.css"  /}
+  {load href="/static/layui/layui.js"  /}
+  {load href="/static/layui/user/useredit.js"  /}
+</head>
+<body>
+<div class="panel admin-panel"> <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>用户信息编辑</strong></div>
+    <div class="body-content">
+        <form class="layui-form">
+                <div class="layui-form-item" style="width: 100%">
+                    <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">用 户 名：</label>
+                    <div class="layui-input-inline">
+                        <input type="text"  width="400px" class="layui-input"  value="{$list.0.name}" name="username">
+                    </div>
+                    <div class="layui-upload-list">
+                    <img src="{$img}" class="layui-upload-img" style="float: right" id="demo2">
+                    <button type="button" class="layui-btn" id="image2">+ 浏览上传图片</button>
+                    </div>
+                </div>
+
+                <div class="layui-form-item" style="width: 40%">
+                    <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium" >部门：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input"  value="{$list.0.department}" name="dep"  />
+                    </div>
+                </div>
+
+
+                <div class="layui-form-item" style="width: 40%">
+                    <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium" >手机：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input"  value="{$list.0.tel}" name="tel"  />
+                    </div>
+                </div>
+
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">E-mail：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input"  value="{$list.0.email}" name="email"  />
+                    </div>
+                    <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium" >QQ：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input"  value="{$list.0.qq}" name="qq"  />
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium" >地址：</label>
+                    <div class="layui-input-inline" style="width: 600px;">
+                        <input type="text" class="layui-input"   value="{$list.0.address}" name="add" />
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium" >备注：</label>
+                    <div class="layui-input-inline" style="width: 600px;">
+                        <input type="text"  class="layui-input"  value="{$list.0.note}" name="note"  />
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="field" align="center">
+                        <button  class="layui-btn" lay-submit="" lay-filter="submit3">提  交</button>
+                        <button  class="layui-btn" lay-submit="" lay-filter="submit4">返  回</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+</body></html>

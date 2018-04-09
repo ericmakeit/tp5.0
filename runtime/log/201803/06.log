@@ -1,0 +1,34 @@
+---------------------------------------------------------------
+[ 2018-03-06T10:11:58+08:00 ] 127.0.0.1 POST /
+[ info ] master.test.dphub.sandai.net:80/ [运行时间：0.069509s][吞吐率：14.39req/s] [内存消耗：2,460.51kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'master.test.dphub.sandai.net:80',
+  'content-type' => 'application/octet-stream',
+  'content-length' => '256',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-06T22:36:11+08:00 ] 127.0.0.1 POST /
+[ info ] master.test.dphub.sandai.net:80/ [运行时间：0.096294s][吞吐率：10.38req/s] [内存消耗：2,460.52kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'master.test.dphub.sandai.net:80',
+  'content-type' => 'application/octet-stream',
+  'content-length' => '256',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

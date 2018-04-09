@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title>新增用户</title>
+  <!--//Thinkphp5.0版本专有写法，{load href="" /}亦可-->
+  {css href="/static/css/pintuer.css" /}
+  {css href="/static/css/admin.css" /}
+  {css href="/static/layui/css/layui.css"  /}
+  {load href="/static/layui/layui.js"  /}
+  {load href="/static/layui/user/adduser.js"  /}
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加用户</strong></div>
+  <div class="body-content">
+    <form  class="layui-form" enctype="multipart/form-data" action="" >
+      <div class="layui-form-item">
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium">用 户 名：</label>
+
+        <div class="layui-input-inline">
+          <input type="text" name="username" width="400px" lay-verify="require|username" lay-filter="mytestform" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+          <div class="tipss"></div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium">输入密码：</label>
+        <div class="layui-input-inline">
+          <input type="password" name="password1" id="pass1" lay-verify="require|pass" lay-filter="mytestform" placeholder="请输入密码" autocomplete="off" class="layui-input">
+          <div class="tipss"></div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium">确认密码：</label>
+        <div class="layui-input-inline">
+          <input type="password" name="password2" id="pass2" lay-verify="require|pass|passvaild" lay-filter="mytestform" placeholder="请输入密码" autocomplete="off" class="layui-input">
+          <div class="tipss"></div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium">E-mail：</label>
+        <div class="layui-input-inline">
+          <input type="text" lay-verify="email" lay-filter="mytestform" class="layui-input" value="" name="email"  />
+          <div class="tipss"></div>
+        </div>
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium" >QQ：</label>
+        <div class="layui-input-inline">
+          <input type="text" lay-verify="qq" lay-filter="mytestform" class="layui-input" value="" name="qq"  />
+          <div class="tipss"></div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium" >部门：</label>
+        <div class="layui-input-inline">
+          <input type="text" class="layui-input" lay-verify="title" lay-filter="mytestform" value="" name="dep" data-validate="required:请输入部门" />
+          <div class="tipss"></div>
+        </div>
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium" >手机：</label>
+        <div class="layui-input-inline">
+          <input type="text" class="layui-input" lay-verify="phone" lay-filter="mytestform" value="" name="tel"  />
+          <div class="tipss"></div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium" >图片：</label>
+        <div class="layui-input-inline" style="width:600px">
+          <div class="layui-upload-list">
+            <img class="layui-upload-img" id="demo1">
+            <p id="demoText"></p>
+          </div>
+          <div class="layui-form-item">
+            <div class="tipss" style="margin-left: 200px">图片尺寸：130*168</div>
+          </div>
+          <button type="button" class="layui-btn" id="image1">+ 浏览上传图片</button>
+
+      </div>
+        <div class="layui-form-item"></div>
+        <div class="layui-form-item">
+        <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium" >地址：</label>
+        <div class="layui-input-inline" style="width: 600px;">
+            <input type="text" class="layui-input" lay-verify="title" lay-filter="mytestform" value="" name="add" />
+        </div>
+      </div>
+      <div class="layui-form-item">
+          <label class="layui-form-label" style="width:200px;text-align: left;font-size: medium" >备注：</label>
+          <div class="layui-input-inline" style="width: 600px;">
+            <input type="text" lay-verify="title" lay-filter="mytestform" class="layui-input" value="" name="note"  />
+          </div>
+      </div>
+      <div class="layui-form-item">
+
+        <div class="field" align="center">
+          <button  class="layui-btn" lay-submit="" lay-filter="submit1"> 提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body></html>

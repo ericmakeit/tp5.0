@@ -1,0 +1,17 @@
+---------------------------------------------------------------
+[ 2018-04-06T16:40:17+08:00 ] 127.0.0.1 POST /
+[ info ] master.test.dphub.sandai.net:80/ [运行时间：0.091144s][吞吐率：10.97req/s] [内存消耗：2,544.38kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'master.test.dphub.sandai.net:80',
+  'content-type' => 'application/octet-stream',
+  'content-length' => '256',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

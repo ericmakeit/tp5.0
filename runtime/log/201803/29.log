@@ -1,0 +1,2551 @@
+---------------------------------------------------------------
+[ 2018-03-29T11:53:26+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.074270s][吞吐率：13.46req/s] [内存消耗：2,409.64kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T11:53:27+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.102740s][吞吐率：9.73req/s] [内存消耗：4,771.82kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001490s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001337s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001315s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000814s ]
+---------------------------------------------------------------
+[ 2018-03-29T11:53:31+08:00 ] 0.0.0.0 GET /
+[ info ] localhost/ [运行时间：0.059792s][吞吐率：16.72req/s] [内存消耗：2,520.09kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T11:53:44+08:00 ] 0.0.0.0 POST /Index/Login/check.html
+[ info ] localhost/Index/Login/check.html [运行时间：0.061472s][吞吐率：16.27req/s] [内存消耗：2,505.57kb] [文件加载：61]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '40',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'admin',
+  'password' => 'admin12345',
+  'code' => '6982',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] D:\Dentv\wwwroot\tp5.0\thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T11:53:47+08:00 ] 0.0.0.0 GET /Index/Index/loginSuc.html
+[ info ] localhost/Index/Index/loginSuc.html [运行时间：0.053068s][吞吐率：18.84req/s] [内存消耗：2,520.63kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Login/check.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\loginsuc.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T11:53:47+08:00 ] 0.0.0.0 GET /index/index/adduser.html
+[ info ] localhost/index/index/adduser.html [运行时间：0.061953s][吞吐率：16.14req/s] [内存消耗：2,410.38kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adduser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T11:54:08+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.048376s][吞吐率：20.67req/s] [内存消耗：2,410.41kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T11:54:08+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.084265s][吞吐率：11.87req/s] [内存消耗：4,772.26kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001186s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001221s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000800s ]
+---------------------------------------------------------------
+[ 2018-03-29T11:54:10+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=2&limit=10
+[ info ] localhost/Index/Index/usrecho?page=2&limit=10 [运行时间：0.086795s][吞吐率：11.52req/s] [内存消耗：4,772.33kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001200s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001663s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 10,10 [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000729s ]
+---------------------------------------------------------------
+[ 2018-03-29T11:54:11+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.084586s][吞吐率：11.82req/s] [内存消耗：4,772.26kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001219s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001129s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000786s ]
+---------------------------------------------------------------
+[ 2018-03-29T11:54:12+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=3&limit=10
+[ info ] localhost/Index/Index/usrecho?page=3&limit=10 [运行时间：0.080246s][吞吐率：12.46req/s] [内存消耗：4,772.36kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001196s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001147s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 20,10 [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000767s ]
+---------------------------------------------------------------
+[ 2018-03-29T11:54:14+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.083048s][吞吐率：12.04req/s] [内存消耗：4,772.26kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001175s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001050s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000794s ]
+---------------------------------------------------------------
+[ 2018-03-29T11:54:16+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=3&limit=10
+[ info ] localhost/Index/Index/usrecho?page=3&limit=10 [运行时间：0.080340s][吞吐率：12.45req/s] [内存消耗：4,772.36kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001326s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001361s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 20,10 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000768s ]
+---------------------------------------------------------------
+[ 2018-03-29T11:54:19+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.085294s][吞吐率：11.72req/s] [内存消耗：4,772.26kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=lsunbi9jeh27ss7svk77l01bv5',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001221s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001113s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000772s ]
+---------------------------------------------------------------
+[ 2018-03-29T12:14:27+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.056721s][吞吐率：17.63req/s] [内存消耗：2,520.48kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T12:14:28+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.051616s][吞吐率：19.37req/s] [内存消耗：2,410.21kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T12:14:28+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.093488s][吞吐率：10.70req/s] [内存消耗：4,771.82kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001432s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001342s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000826s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000767s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:34:17+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.055839s][吞吐率：17.91req/s] [内存消耗：2,524.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:34:17+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.048299s][吞吐率：20.70req/s] [内存消耗：2,414.51kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:34:18+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.088129s][吞吐率：11.35req/s] [内存消耗：4,776.19kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004365s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.003012s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001254s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000824s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:34:21+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.087460s][吞吐率：11.43req/s] [内存消耗：4,850.86kb] [文件加载：74]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'name' => 'administrator',
+  'password' => '9580ab5d9db022c73d6678b07c86c9db',
+  'email' => '4251289@qq.com',
+  'tel' => '',
+  'qq' => '23245',
+  'department' => '昆明筑科',
+  'pic' => '',
+  'address' => '大商汇84－604',
+  'note' => '大商汇',
+  'delete_time' => '0000-00-00 00:00:00',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001393s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001450s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` = 1 ) AND `zk_user`.`delete_time` IS NULL [ RunTime:0.000753s ]
+[ error ] [2]Illegal offset type[D:\Dentv\wwwroot\tp5.0\thinkphp\library\think\View.php:84]
+---------------------------------------------------------------
+[ 2018-03-29T13:37:00+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.061741s][吞吐率：16.20req/s] [内存消耗：2,386.10kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:37:15+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/1
+[ info ] localhost/Index/Index/dataCheck/1 [运行时间：0.056808s][吞吐率：17.60req/s] [内存消耗：2,386.63kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:38:54+08:00 ] 0.0.0.0 GET /Index/Login.html
+[ info ] localhost/Index/Login.html [运行时间：0.065511s][吞吐率：15.26req/s] [内存消耗：2,498.77kb] [文件加载：59]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:39:01+08:00 ] 0.0.0.0 POST /Index/Login/check.html
+[ info ] localhost/Index/Login/check.html [运行时间：0.057573s][吞吐率：17.37req/s] [内存消耗：2,505.94kb] [文件加载：61]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '40',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'admin',
+  'password' => 'admin12345',
+  'code' => '6982',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] D:\Dentv\wwwroot\tp5.0\thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:39:04+08:00 ] 0.0.0.0 GET /Index/Index/loginSuc.html
+[ info ] localhost/Index/Index/loginSuc.html [运行时间：0.069489s][吞吐率：14.39req/s] [内存消耗：2,524.97kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Login/check.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=2e6gdni77nmgo5d0ptirp12t73',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\loginsuc.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:39:04+08:00 ] 0.0.0.0 GET /index/index/adduser.html
+[ info ] localhost/index/index/adduser.html [运行时间：0.066518s][吞吐率：15.03req/s] [内存消耗：2,414.64kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=2e6gdni77nmgo5d0ptirp12t73',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adduser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:39:13+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.050334s][吞吐率：19.87req/s] [内存消耗：2,414.51kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:39:13+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.092950s][吞吐率：10.76req/s] [内存消耗：4,776.19kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010917s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001453s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000788s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:39:14+08:00 ] 0.0.0.0 GET /Index/Index/function%20()%20%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20$.ajax(%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type:
+[ info ] localhost/Index/Index/function%20()%20%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20$.ajax(%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type: [运行时间：0.066823s][吞吐率：14.96req/s] [内存消耗：2,464.16kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:43:29+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.056855s][吞吐率：17.59req/s] [内存消耗：2,524.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:43:30+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.051733s][吞吐率：19.33req/s] [内存消耗：2,414.51kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:43:31+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.087268s][吞吐率：11.46req/s] [内存消耗：4,776.19kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001416s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001620s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001149s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000913s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:43:32+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.069485s][吞吐率：14.39req/s] [内存消耗：3,136.65kb] [文件加载：65]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\Dentv\wwwroot\tp5.0\application\index\controller\Index.php:220]
+---------------------------------------------------------------
+[ 2018-03-29T13:44:38+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.055949s][吞吐率：17.87req/s] [内存消耗：2,524.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:44:40+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.049184s][吞吐率：20.33req/s] [内存消耗：2,414.51kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:44:40+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.105267s][吞吐率：9.50req/s] [内存消耗：4,776.19kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001181s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000731s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000707s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:44:41+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.067685s][吞吐率：14.77req/s] [内存消耗：3,136.65kb] [文件加载：65]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\Dentv\wwwroot\tp5.0\application\index\controller\Index.php:220]
+---------------------------------------------------------------
+[ 2018-03-29T13:45:48+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.052186s][吞吐率：19.16req/s] [内存消耗：2,524.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:45:49+08:00 ] 0.0.0.0 GET /Index/Index/adduser.html
+[ info ] localhost/Index/Index/adduser.html [运行时间：0.057985s][吞吐率：17.25req/s] [内存消耗：2,414.41kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adduser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:45:50+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.050667s][吞吐率：19.74req/s] [内存消耗：2,414.51kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:45:50+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.110963s][吞吐率：9.01req/s] [内存消耗：4,776.19kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001434s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.002040s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001654s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000896s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:45:52+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.093218s][吞吐率：10.73req/s] [内存消耗：4,850.85kb] [文件加载：74]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'name' => 'administrator',
+  'password' => '9580ab5d9db022c73d6678b07c86c9db',
+  'email' => '4251289@qq.com',
+  'tel' => '',
+  'qq' => '23245',
+  'department' => '昆明筑科',
+  'pic' => '',
+  'address' => '大商汇84－604',
+  'note' => '大商汇',
+  'delete_time' => '0000-00-00 00:00:00',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001281s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001245s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` = 1 ) AND `zk_user`.`delete_time` IS NULL [ RunTime:0.000649s ]
+[ error ] [2]Illegal offset type[D:\Dentv\wwwroot\tp5.0\thinkphp\library\think\View.php:84]
+---------------------------------------------------------------
+[ 2018-03-29T13:46:37+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.051470s][吞吐率：19.43req/s] [内存消耗：2,524.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:46:38+08:00 ] 0.0.0.0 GET /Index/Index/adduser.html
+[ info ] localhost/Index/Index/adduser.html [运行时间：0.050726s][吞吐率：19.71req/s] [内存消耗：2,414.41kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adduser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:46:41+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.050779s][吞吐率：19.69req/s] [内存消耗：2,414.51kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:46:41+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.116708s][吞吐率：8.57req/s] [内存消耗：4,776.19kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001208s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001269s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001103s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:46:43+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.100478s][吞吐率：9.95req/s] [内存消耗：4,850.85kb] [文件加载：74]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'name' => 'administrator',
+  'password' => '9580ab5d9db022c73d6678b07c86c9db',
+  'email' => '4251289@qq.com',
+  'tel' => '',
+  'qq' => '23245',
+  'department' => '昆明筑科',
+  'pic' => '',
+  'address' => '大商汇84－604',
+  'note' => '大商汇',
+  'delete_time' => '0000-00-00 00:00:00',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010491s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` = 1 ) AND `zk_user`.`delete_time` IS NULL [ RunTime:0.000764s ]
+[ error ] [2]Illegal offset type[D:\Dentv\wwwroot\tp5.0\thinkphp\library\think\View.php:84]
+---------------------------------------------------------------
+[ 2018-03-29T13:47:42+08:00 ] 0.0.0.0 GET /Index/Index/adduser.html
+[ info ] localhost/Index/Index/adduser.html [运行时间：0.054139s][吞吐率：18.47req/s] [内存消耗：2,414.81kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adduser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:47:43+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.048380s][吞吐率：20.67req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:47:43+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.099733s][吞吐率：10.03req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001227s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001354s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000816s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000987s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:47:45+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.064594s][吞吐率：15.48req/s] [内存消耗：3,064.59kb] [文件加载：63]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'name' => 'administrator',
+  'password' => '9580ab5d9db022c73d6678b07c86c9db',
+  'email' => '4251289@qq.com',
+  'tel' => '',
+  'qq' => '23245',
+  'department' => '昆明筑科',
+  'pic' => '',
+  'address' => '大商汇84－604',
+  'note' => '大商汇',
+  'delete_time' => '0000-00-00 00:00:00',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:48:31+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.051625s][吞吐率：19.37req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:48:34+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.050299s][吞吐率：19.88req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:48:34+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.119429s][吞吐率：8.37req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001165s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001439s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000928s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000733s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:48:35+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.065270s][吞吐率：15.32req/s] [内存消耗：3,064.59kb] [文件加载：63]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'name' => 'administrator',
+  'password' => '9580ab5d9db022c73d6678b07c86c9db',
+  'email' => '4251289@qq.com',
+  'tel' => '',
+  'qq' => '23245',
+  'department' => '昆明筑科',
+  'pic' => '',
+  'address' => '大商汇84－604',
+  'note' => '大商汇',
+  'delete_time' => '0000-00-00 00:00:00',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:48:35+08:00 ] 0.0.0.0 GET /Index/Index/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%B5%8F%E8%A7%88
+[ info ] localhost/Index/Index/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%B5%8F%E8%A7%88 [运行时间：0.062102s][吞吐率：16.10req/s] [内存消耗：2,464.38kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:50:16+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.054349s][吞吐率：18.40req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:50:17+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.051325s][吞吐率：19.48req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:50:17+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.089829s][吞吐率：11.13req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001223s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001331s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000850s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:50:19+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.082836s][吞吐率：12.07req/s] [内存消耗：3,064.59kb] [文件加载：63]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'name' => 'administrator',
+  'password' => '9580ab5d9db022c73d6678b07c86c9db',
+  'email' => '4251289@qq.com',
+  'tel' => '',
+  'qq' => '23245',
+  'department' => '昆明筑科',
+  'pic' => '',
+  'address' => '大商汇84－604',
+  'note' => '大商汇',
+  'delete_time' => '0000-00-00 00:00:00',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:50:19+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.055028s][吞吐率：18.17req/s] [内存消耗：2,386.64kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:51:04+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.052488s][吞吐率：19.05req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:51:04+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.054881s][吞吐率：18.22req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T13:51:05+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.111614s][吞吐率：8.96req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002266s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001643s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001418s ]
+---------------------------------------------------------------
+[ 2018-03-29T13:51:06+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck
+[ info ] localhost/Index/Index/dataCheck [运行时间：0.076454s][吞吐率：13.08req/s] [内存消耗：3,064.59kb] [文件加载：63]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'name' => 'administrator',
+  'password' => '9580ab5d9db022c73d6678b07c86c9db',
+  'email' => '4251289@qq.com',
+  'tel' => '',
+  'qq' => '23245',
+  'department' => '昆明筑科',
+  'pic' => '',
+  'address' => '大商汇84－604',
+  'note' => '大商汇',
+  'delete_time' => '0000-00-00 00:00:00',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:17:42+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.053185s][吞吐率：18.80req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:17:45+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.053125s][吞吐率：18.82req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:17:45+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.109973s][吞吐率：9.09req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001459s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001847s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001123s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:17:46+08:00 ] 0.0.0.0 GET /Index/Index/%3Cdiv%20align='center'%20style='margin-top:%2020px'%3E%E7%A1%AE%E5%AE%9A%E6%9F%A5%E7%9C%8B%E8%AF%A5%E6%9D%A1%E4%BF%A1%E6%81%AF%E5%90%97?%3C/div%3E
+[ info ] localhost/Index/Index/%3Cdiv%20align='center'%20style='margin-top:%2020px'%3E%E7%A1%AE%E5%AE%9A%E6%9F%A5%E7%9C%8B%E8%AF%A5%E6%9D%A1%E4%BF%A1%E6%81%AF%E5%90%97?%3C/div%3E [运行时间：0.065710s][吞吐率：15.22req/s] [内存消耗：2,464.46kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  '</div>' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:18:00+08:00 ] 0.0.0.0 POST /Index/Index/dataCheck/1
+[ info ] localhost/Index/Index/dataCheck/1 [运行时间：0.070655s][吞吐率：14.15req/s] [内存消耗：3,136.81kb] [文件加载：65]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\Dentv\wwwroot\tp5.0\application\index\controller\Index.php:220]
+---------------------------------------------------------------
+[ 2018-03-29T14:19:23+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.050116s][吞吐率：19.95req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:19:24+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.103445s][吞吐率：9.67req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001313s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000759s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:19:24+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.057413s][吞吐率：17.42req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:19:25+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.049699s][吞吐率：20.12req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:19:25+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.095950s][吞吐率：10.42req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001434s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001889s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000948s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000759s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:19:26+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck[object%20Object]
+[ info ] localhost/Index/Index/dataCheck[object%20Object] [运行时间：0.058209s][吞吐率：17.18req/s] [内存消耗：2,464.34kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:20:03+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.052300s][吞吐率：19.12req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:20:04+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.052113s][吞吐率：19.19req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:20:04+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.105570s][吞吐率：9.47req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001332s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001642s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001194s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000875s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:20:05+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.058831s][吞吐率：17.00req/s] [内存消耗：2,387.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:21:46+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.054417s][吞吐率：18.38req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:21:46+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.050191s][吞吐率：19.92req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:21:47+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.117830s][吞吐率：8.49req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001544s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001513s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.001064s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000941s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:21:55+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.053360s][吞吐率：18.74req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:21:56+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.052008s][吞吐率：19.23req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:21:56+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.107359s][吞吐率：9.31req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010318s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000841s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:21:57+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.051105s][吞吐率：19.57req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:21:57+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.052198s][吞吐率：19.16req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:10+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.050606s][吞吐率：19.76req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:11+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.050359s][吞吐率：19.86req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:11+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.091843s][吞吐率：10.89req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001452s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001248s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.002013s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000770s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:23:12+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.053319s][吞吐率：18.75req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:12+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.052283s][吞吐率：19.13req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:38+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.051024s][吞吐率：19.60req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:39+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.048153s][吞吐率：20.77req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:39+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.102883s][吞吐率：9.72req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001226s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001262s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000791s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:23:40+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.050814s][吞吐率：19.68req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:40+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.052257s][吞吐率：19.14req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:52+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.053187s][吞吐率：18.80req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:53+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.048729s][吞吐率：20.52req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:53+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.083608s][吞吐率：11.96req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001138s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001648s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000823s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000692s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:23:55+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.059798s][吞吐率：16.72req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:23:55+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/%7B
+[ info ] localhost/Index/Index/dataCheck/%7B [运行时间：0.050452s][吞吐率：19.82req/s] [内存消耗：2,386.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:25:13+08:00 ] 0.0.0.0 GET /Index/Index/adminpass.html
+[ info ] localhost/Index/Index/adminpass.html [运行时间：0.052783s][吞吐率：18.95req/s] [内存消耗：2,524.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\adminpass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:25:14+08:00 ] 0.0.0.0 GET /Index/Index/brouser.html
+[ info ] localhost/Index/Index/brouser.html [运行时间：0.051618s][吞吐率：19.37req/s] [内存消耗：2,414.74kb] [文件加载：56]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/loginSuc.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../application/view/index\brouser.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:25:15+08:00 ] 0.0.0.0 GET /Index/Index/usrecho?page=1&limit=10
+[ info ] localhost/Index/Index/usrecho?page=1&limit=10 [运行时间：0.089733s][吞吐率：11.14req/s] [内存消耗：4,776.20kb] [文件加载：72]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001332s ] mysql:host=127.0.0.1;dbname=zk_sysdata;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zk_user` [ RunTime:0.001105s ]
+[ sql ] [ SQL ] SELECT * FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 0,10 [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zk_user` WHERE (  `id` > 0 ) AND `zk_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000794s ]
+---------------------------------------------------------------
+[ 2018-03-29T14:25:16+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/[object%20Object]
+[ info ] localhost/Index/Index/dataCheck/[object%20Object] [运行时间：0.057610s][吞吐率：17.36req/s] [内存消耗：2,387.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-29T14:25:16+08:00 ] 0.0.0.0 GET /Index/Index/dataCheck/[object%20Object]
+[ info ] localhost/Index/Index/dataCheck/[object%20Object] [运行时间：0.057749s][吞吐率：17.32req/s] [内存消耗：2,387.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\Dentv\wwwroot\tp5.0\thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/Index/Index/brouser.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
