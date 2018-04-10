@@ -38,8 +38,13 @@ class Index extends Controller
 
         $list = $webInfo::where('id','=',$id)->select();
 
+        //取图片路径
+        $img = '/uploads/'.$list['0']['s_logo'];
+
         if ($list !=""){
             $this->assign('list',$list);
+
+            $this->assign('img',$img);
 
             return $this->fetch();
         }else{//数据表为空，赋空值给$list，用于表单出首页空单
@@ -81,8 +86,7 @@ class Index extends Controller
         if ($request->isAjax()){
             //取ID最大值
             $webInfo = new Info;
-            $id = $webInfo->max('id');
-            $id=++$id;
+
             //取文件名，没有上传图片赋值为空
             if (!Session::has('picfile')) {
                 $picfile = Session::set('picfile',0);
@@ -91,9 +95,8 @@ class Index extends Controller
             }
 
             $infoData = [
-                'id'          => $id,
                 's_maintitle' => $_POST['mtitle'],
-                's_logo'      => $_POST[''],
+                's_logo'      => $picfile,
                 's_url'       => $_POST['surl'],
                 's_subtitle'  => $_POST['sentitle'],
                 's_keywords'  => $_POST['skeywords'],
@@ -110,7 +113,7 @@ class Index extends Controller
                 's_copyright' => $_POST['scopyright']
             ];
 
-            $result =$webInfo->save();
+            $result =$webInfo::create($infoData);
 
             //数据添加成功，返回成功标识符
             $res =1;
@@ -395,15 +398,22 @@ class Index extends Controller
     }
 
 
-    public function uploadt(){
+    public function uploadLogo(){
 
-        $file = $this->request->file('image');
+        $file = $this->request->file('file');
 
         $info = $file->move('../public/uploads');
-
         if ($info) {
-            //赋值文件名到session会话，以便提交整体表单存入数据库
+
             $fname = $info->getSaveName();
+
+            //赋值文件名到session会话，以便提交整体表单存入数据库
+            Session::set('picfile',$fname);
+
+            //进行图像处理，裁剪为130*168缩略图格式
+            $imagefname = '../public/uploads/'.$fname;
+            $image = \think\Image::open($imagefname);
+            $image->thumb(50,55,\think\Image::THUMB_CENTER)->save($imagefname);
 
             $result = [
                 'code'     => 0,
@@ -419,6 +429,13 @@ class Index extends Controller
         }
 
         return json($result);
+    }
+
+
+    public function batAddUser(){
+
+        return $this->fetch();
+
     }
 
     public function hello() {

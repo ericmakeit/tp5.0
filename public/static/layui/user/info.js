@@ -47,31 +47,32 @@ layui.use(['form', 'layer','upload'], function(){
 
     //监听提交
     form.on('submit(submit0)', function(data){
-        //向uAdd方法传递JSON数组
+        //向addInfo方法传递JSON数组
         var infoData = data.field;
-        console.log(usrdata);
+        console.log(infoData);
         $.ajax({
             url:'addInfo'
             ,dataType: 'json'
             ,data: infoData
             ,type:'POST'
             ,success:function (res) {
-                if (res == 1){
-                    layer.msg('数据添加成功！',{
+                if (res == 1) {
+                    layer.msg('数据添加成功！', {
                         icon: 1,
                         time: 1000 //2秒关闭（如果不配置，默认是3秒）
-                    },function () {
+                    }, function () {
                         window.parent.location.reload();
                         //var index = parent.layer.getFrameIndex(window.name);
                         //parent.layer.close(index);
                     });
-                }else{
-                    layer.msg('数据添加失败，请检查后台服务器！',{
+                } else {
+                    layer.msg('数据添加失败，请检查后台服务器！', {
                         icon: 5,
                         time: 1000 //2秒关闭（如果不配置，默认是3秒）
                     });
+                }
             }
-            ,error: function(XMLHttpRequest, textStatus, errorThrown,msg) {
+            ,error:function(XMLHttpRequest,textStatus,errorThrown,msg) {
                     alert(XMLHttpRequest.status);
                     alert(XMLHttpRequest.readyState);
                     alert(textStatus);
@@ -81,7 +82,43 @@ layui.use(['form', 'layer','upload'], function(){
                 }
         });
 
+
        return false;
 
     });
+
+    var uploadInst1 = upload.render({
+        elem: '#image0' //绑定元素
+        ,url: 'uploadLogo' //上传接口
+        ,size: 50
+        ,accecpt: 'images'
+        ,auto: true
+        ,before: function(obj){
+            //预读本地文件，不支持ie8
+            obj.preview(function(index, file, result){
+                $('#demo0').attr('src', result); //图片链接（base64）
+                //console.log(index);
+                //console.log(result);
+            });
+        }
+        ,done: function(res){
+
+            console.log(res);
+
+            //上传完毕回调
+            //layer.msg(res,{icon:2,time:5000});
+
+        }
+        ,error:function(XMLHttpRequest,textStatus,errorThrown,msg){
+
+            //请求异常回调
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+            alert(errorThrown);
+            alert(msg);
+            layer.msg('图片上传失败，请检查服务运行状况！');
+        }
+    });
+
 });

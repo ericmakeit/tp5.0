@@ -16,159 +16,163 @@
 <div class="panel admin-panel">
   <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 系统信息</strong></div>
   <div class="body-content">
-    <form method="post" class="form-x" action="">
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:350px;text-align: left;font-size: medium">网站标题：</label>
-        </div>
-        <div class="layui-input-inline"  style="width:300px;text-align: left">
-          <input type="text" class="input" name="mtitle" " value="{$list.0.s_maintitle}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:350px;text-align: left;font-size: medium">网站LOGO：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" id="url1" name="slogo" class="input tips" style="width:25%; float:left;" value="" data-toggle="hover" data-place="right" data-image="" />
+    <form class="layui-form" enctype="multipart/form-data" action="">
 
-        </div>
-        <input type="button" class="layui-btn  layui-btn-normal" id="image1" value="+ 浏览上传" >
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:350px;text-align: left;font-size: medium">网站域名：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input" name="surl" " value="{$list.0.s_url}" />
-        </div>
-      </div>
-      <div class="layui-form-item" style="display:none">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">副标题：</label>
-        </div>
-          <input type="text" class="input" name="sentitle" " value="{$list.0.s_subtitle}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">网站关键字：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input  type="text" class="input" name="skeywords"  value="{$list.0.s_keywords}"/>
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">网&nbsp;站&nbsp;描&nbsp;述：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input" " name="sdescription" value="{$list.0.s_description}"/>
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">联&nbsp;系&nbsp;人：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input"  name="s_name" value="{$list.0.s_name}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input"  name="s_phone" lay-verify="phone" value="{$list.0.s_phone}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp话：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input"  name="s_tel" value="{$list.0.s_tel}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item" style="display:none;">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">400&nbsp;电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp话：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input"  name="s_400" value="{$list.0.s_400}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">传&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp真：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input" " name="s_fax" value="{$list.0.s_fax}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspQ：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input"  name="s_qq" lay-verify="qq" value="{$list.0.s_qq}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item" style="display:none">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">QQ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp群：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input" name="s_qqu" lay-verify="qq" value="{$list.0.s_qqu}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-     
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">E-mail：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input"  name="s_email" lay-verify="email" value="{$list.0.s_email}" />
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp址：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" class="input"  name="s_address" value="{$list.0.s_address}" />
-          <div class="tips"></div>
-        </div>
-      </div>  
-              
-      <div class="layui-form-item">
-        <div class="label">
-          <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">底&nbsp;部&nbsp;信&nbsp;息：</label>
-        </div>
-        <div class="layui-input-inline" style="width:300px;text-align: left">
-          <input type="text" name="scopyright" class="input" value="{$list.0.s_copyright}">
-          <div class="tips"></div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="field" align="center">
-          <button  class="layui-btn layui-btn-normal" lay-submit="" lay-filter="submit0"> 提  交</button>
-          <button type="reset" class="layui-btn layui-btn-normal">重  置</button>
-        </div>
-      </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:350px;text-align: left;font-size: medium">网&nbsp;站&nbsp;标&nbsp;题：</label>
+            </div>
+            <div class="layui-input-inline"  style="width:300px;text-align: left">
+              <input type="text" class="input" name="mtitle"  value="{$list.0.s_maintitle}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:350px;text-align: left;font-size: medium">网站LOGO：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+                <img src="{$img}" class="layui-upload-img" id="demo0">
+
+            </div>
+            <input type="button" class="layui-btn  layui-btn-normal" id="image0" value="+ 浏览上传" >
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:350px;text-align: left;font-size: medium">网&nbsp;站&nbsp;域&nbsp;名：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input" name="surl" value="{$list.0.s_url}" />
+            </div>
+          </div>
+          <div class="layui-form-item" >
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">副&nbsp;标&nbsp;题：</label>
+            </div>
+            <input type="text" class="input" name="sentitle"  value="{$list.0.s_subtitle}" />
+            <div class="tips"></div>
+          </div>
+
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">网站关键字：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input  type="text" class="input" name="skeywords"  value="{$list.0.s_keywords}"/>
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">网&nbsp;站&nbsp;描&nbsp;述：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="sdescription" value="{$list.0.s_description}"/>
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">联&nbsp;系&nbsp;人：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_name" value="{$list.0.s_name}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">手&nbsp;&nbsp;机：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_phone" lay-verify="phone" value="{$list.0.s_phone}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">电&nbsp;&nbsp;话：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_tel" value="{$list.0.s_tel}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item" style="display:none;">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">400&nbsp;电&nbsp;&nbsp;话：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_400" value="{$list.0.s_400}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">传&nbsp;&nbsp;真：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_fax" value="{$list.0.s_fax}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">Q&nbsp;&nbsp;Q：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_qq" lay-verify="qq" value="{$list.0.s_qq}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item" >
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">QQ&nbsp;&nbsp;群：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input" name="s_qqu" lay-verify="qq" value="{$list.0.s_qqu}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">E-mail：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_email" lay-verify="email" value="{$list.0.s_email}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">地&nbsp;&nbsp;址：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" class="input"  name="s_address" value="{$list.0.s_address}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="label">
+              <label class="layui-form-label" style="width:150px;text-align: left;font-size: medium">底&nbsp;部&nbsp;信&nbsp;息：</label>
+            </div>
+            <div class="layui-input-inline" style="width:300px;text-align: left">
+              <input type="text" name="scopyright" class="input" value="{$list.0.s_copyright}" />
+              <div class="tips"></div>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="field" align="center">
+              <button  class="layui-btn layui-btn-normal" lay-submit="" lay-filter="submit0"> 提  交</button>
+              <button type="reset" class="layui-btn layui-btn-normal">重  置</button>
+            </div>
+          </div>
+
+
     </form>
+
   </div>
-</div>
+
+  </div>
+
 </body></html>
