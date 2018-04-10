@@ -268,40 +268,6 @@ class Index extends Controller
     }
 
 
-
-    public function upload(){
-
-        $file = $this->request->file('file');
-
-        $info = $file->move('../public/uploads');
-        if ($info) {
-
-            $fname = $info->getSaveName();
-
-            //赋值文件名到session会话，以便提交整体表单存入数据库
-            Session::set('picfile',$fname);
-
-            //进行图像处理，裁剪为130*168缩略图格式
-            $imagefname = '../public/uploads/'.$fname;
-            $image = \think\Image::open($imagefname);
-            $image->thumb(130,168,\think\Image::THUMB_CENTER)->save($imagefname);
-
-            $result = [
-                'code'     => 0,
-                'msg'      => '上传成功',
-                'filename' => '/public/uploads/' . str_replace('\\', '/', $info->getSaveName()),
-                'filepath' => $info->getFilename()
-            ];
-        } else {
-            $result = [
-                'code' => -1,
-                'msg'  => $file->getError()
-            ];
-        }
-
-        return json($result);
-    }
-
     public function datacheck($id){
 
         $user = model('User');
@@ -397,6 +363,38 @@ class Index extends Controller
 
     }
 
+    public function upload(){
+
+        $file = $this->request->file('file');
+
+        $info = $file->move('../public/uploads');
+        if ($info) {
+
+            $fname = $info->getSaveName();
+
+            //赋值文件名到session会话，以便提交整体表单存入数据库
+            Session::set('picfile',$fname);
+
+            //进行图像处理，裁剪为130*168缩略图格式
+            $imagefname = '../public/uploads/'.$fname;
+            $image = \think\Image::open($imagefname);
+            $image->thumb(130,168,\think\Image::THUMB_CENTER)->save($imagefname);
+
+            $result = [
+                'code'     => 0,
+                'msg'      => '上传成功',
+                'filename' => '/public/uploads/' . str_replace('\\', '/', $info->getSaveName()),
+                'filepath' => $info->getFilename()
+            ];
+        } else {
+            $result = [
+                'code' => -1,
+                'msg'  => $file->getError()
+            ];
+        }
+
+        return json($result);
+    }
 
     public function uploadLogo(){
 
