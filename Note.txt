@@ -1,4 +1,4 @@
-程序开发笔记
+﻿程序开发笔记
 
 
 2018年3月24日
@@ -1000,4 +1000,242 @@ if (res == 1){
     http://localhost/Index/Index/public/uploads/20180328/457cfb04cfe7550ce21a5862d3ad9e02.jpg
 
 
+九、导出、导入csv文件
 
+实际运用中EXCEL的导出比导入用的多，这里给大家分享一个导出CSV EXCEL导出，简单，方便。
+
+首先我们在Thinkphp/Library/Think下新文件文件：Csv.class.php,thinkphp 5.0 以上版本应写为Csv.php,经验证可“use think\Csv”引入
+
+<?php
+namespace Think;
+class Csv
+{
+    //导出csv文件
+    public function put_csv($list,$title)
+    {
+        $file_name = "exam".time().".csv";
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename='.$file_name );
+        header('Cache-Control: max-age=0');
+        $file = fopen('php://output',"a");
+        $limit = 1000;
+        $calc = 0;
+        foreach ($title as $v){
+            $tit[] = iconv('UTF-8', 'GB2312//IGNORE',$v);
+        }
+        fputcsv($file,$tit);
+        foreach ($list as $v){
+            $calc++;
+            if($limit == $calc){
+                ob_flush();
+                flush();
+                $calc = 0;
+            }
+            foreach($v as $t){
+                $tarr[] = iconv('UTF-8', 'GB2312//IGNORE',$t); //******注意：PHP扩展中可能没有iconv功能扩展
+            }
+            fputcsv($file,$tarr);
+            unset($tarr);
+        }
+        unset($list);
+        fclose($file);
+        exit();
+    }
+
+    // csv导入,此格式每次最多可以处理1000条数据
+    public function input_csv($csv_file) {
+        $result_arr = array ();
+        $i = 0;
+        while($data_line = fgetcsv($csv_file,10000)) {
+            if ($i == 0) {
+                $GLOBALS ['csv_key_name_arr'] = $data_line;
+                $i ++;
+                continue;
+            }
+            foreach($GLOBALS['csv_key_name_arr'] as $csv_key_num => $csv_key_name ) {
+                $result_arr[$i][$csv_key_name] = $data_line[$csv_key_num];
+            }
+            $i++;
+        }
+        return $result_arr;
+    }
+}
+?>
+
+
+然后我们在导出的时候，在对应的控制器同步use一下。
+
+$csv=new Csv();
+    $list=M("members")->field($field)->limit(10000)->select();//查询数据，可以进行处理
+    $csv_title=array('用户ID','用户名','绑定邮箱','绑定手机','注册时间','注册IP');
+    $csv->put_csv($list,$csv_title);
+
+然后定义字段名，就是第一行的名字，处理后的数组需要与之对应，我个人测试过导出的话这个比PHPEXCEL快很多。而且CSV是中间格式比直接导出excel好多了。
+
+https://blog.csdn.net/qq_37682202/article/details/79426810另有案例
+
+在控制器中调用：
+
+[php] view plain copy
+<?php
+namespace app\index\controller;
+use think\Controller;
+use think\Request;
+use think\Db;
+use think\Paginator;
+use think\Validate;
+use think\Csv;  //此处是csv文件实现的关键
+class Index extends Controller
+{
+    public function _initialize()
+    {
+      header("Content-type:text/html;charset=utf-8");
+    }
+    /*
+     * CSV试题导出
+     */
+    public function downQuestions()
+    {
+        $condition['qu_status'] = array('gt','-1');
+        $csv = new Csv();  //实例化后才可以调用之前类文件定义好的方法
+        $list = Db::table('gw_questions')->field('qu_name,qu_options,qu_answer,qu_describe,gw_topic.to_name,qu_time,te_name')->join('gw_topic','gw_topic.to_id=gw_questions.to_id')->join('gw_teacher','gw_teacher.te_id=gw_questions.te_id','LEFT')->where($condition)->select();
+        $csv_title = array('题干内容','选项详情','参考答案','答案解析','题型','录入时间','录入人');
+        $csv->put_csv($list,$csv_title);
+    }
+
+    /*
+     * CSV试题导入
+     */
+    public function upQuestionsWrite()
+    {
+        // 获取表单上传文件
+        $file = request()->file('examfile');
+        if(empty($file)) {
+            $this->error('请选择上传文件');
+        }
+        // 移动到框架应用根目录/public/uploads/ 目录下
+        $info = $file->move(ROOT_PATH.'public'.DS.'upload');
+        //获取文件（日期/文件），$info->getFilename();
+        $filename = ROOT_PATH.'public'.DS.'upload/'.$info->getSaveName();
+        $handle = fopen($filename,'r');
+        $csv = new Csv();
+        $result = $csv->input_csv($handle); // 解析csv
+        $len_result = count($result);
+        if($len_result == 0){
+            $this->error('此文件中没有数据！');
+        }
+        $data_values = '';
+        for($i = 1;$i < $len_result+1;$i ++) { // 循环获取各字段值
+            $arr = array_values($result[$i]);
+            $qu_name = iconv('gb2312','utf-8',$arr[0] ); // 中文转码
+            $qu_options = iconv('gb2312','utf-8',$arr[1]);
+            $qu_answer = $arr[2];
+            $qu_describe = iconv('gb2312','utf-8',$arr[3]);
+            $to_id = $arr[4];
+            $te_id = 1; //添加试题的教师
+            $data_values .= "('$qu_name','$qu_options','$qu_answer','$qu_describe','$to_id','$te_id'),";
+        }
+        $data_values = substr($data_values,0,- 1 ); // 去掉最后一个逗号
+        fclose($handle); // 关闭指针
+        // 批量插入数据表中
+        $result = DB::execute("insert into gw_questions (qu_name,qu_options,qu_answer,qu_describe,to_id,te_id) values $data_values" );
+        if($result){
+            $this->success('文件上传成功，数据已经导入！','exampaper',3);
+        }else{
+            // 上传失败获取错误信息
+            $this->error($file->getError());
+        }
+    }
+}
+?>
+
+模板页表单（此处我的项目中使用了框架，样式可以按自己的需求修改）：
+[html] view plain copy
+<form action="{:url('index/index/upQuestionsWrite')}" method="post" class="form form-horizontal" enctype="multipart/form-data" id="addform">
+    <div class="row cl">
+    <label class="form-label col-xs-4 col-sm-2">选择试题文件：</label>
+    <div class="btn-upload form-group">
+        <input type="text" name="uploadfile" id="uploadfile" class="input-text upload-url radius" readonly> <a href="javascript:void();" class="btn btn-primary radius"><i class="Hui-iconfont"></i>浏览文件</a>
+        <input type="file" name="examfile" class="input-file" multiple>
+    </div>
+    <a class="btn btn-success btn-submit">导入试题</a>
+    </div>
+</form>
+
+
+[javascript] view plain copy
+<script type="text/javascript">
+$(function(){
+    //表单提交时判断是否有文件存在
+    $(".btn-submit").click(function(){
+        if($("input[name='uploadfile']").val() == ''){
+            alert("请选择CSV文件！");
+            return false;
+    }else{
+        $("#addform").submit();
+    }
+    });
+});
+</script>
+
+
+9.1 相关阅读
+
+https://www.cnblogs.com/aademeng/articles/6233218.html
+
+php中iconv函数使用方法
+在选择用什么工具开发，唯一的指导标准就是：用最少的人力，最少的时间开发JavaEye网站，并且后期维护和持续升级，乃至重写的时候，代价最小。
+
+首先排除Java和C#，代码太多太麻烦；
+其次排除PHP，项目一大，代码一多，代码的管理很成问题，PHP缺乏一个起码的包管理机制；
+
+a.上iconv的官方下载站点
+http://ftp.gnu.org/pub/gnu/libiconv/
+下面Windows版的iconv文件：libiconv-1.9.1.bin.woe32.zip
+将这文件解压，将bin/下面的charset.dll，iconv.dll，iconv.exe拷贝到c:/windows/ (或其它的系统PATH中)
+(ipaddr提醒你，这步是必须的，php_iconv.dll也是调用GNU的iconv库的，所以，先要安装GNU的iconv库)
+
+b.开启php.ini里面的php_iconv.dll
+
+c.重启Apache，再在phpinfo();检测是否开启iconv。
+最近在做一个程序，需要用到iconv函数把抓取来过的utf-8编码的页面转成gb2312， 发现只有用iconv函数把抓取过来的数据一转码数据就会无缘无故的少一些。 让我郁闷了好一会儿，去网上一查资料才知道这是iconv函数的一个bug。iconv在转换字符”—”到gb2312时会出错
+解决方法很简单，就是在需要转成的编码后加 “//IGNORE” 也就是iconv函数第二个参数后.如下：
+以下为引用的内容：
+iconv(”UTF-8″,”GB2312//IGNORE”,$data)
+ignore的意思是忽略转换时的错误，如果没有ignore参数，所有该字符后面的字符串都无法被保存。
+
+这个iconv()这个函数,在php5中是内置的.谢谢.
+
+列子
+<?php
+echo $str= ‘你好,这里是卖咖啡!’;
+echo ‘<br />’;
+
+echo iconv(’GB2312′, ‘UTF-8′, $str);      //将字符串的编码从GB2312转到UTF-8
+echo ‘<br />’;
+
+echo iconv_substr($str, 1, 1, ‘UTF-8′);   //按字符个数截取而非字节
+print_r(iconv_get_encoding());            //得到当前页面编码信息
+
+echo iconv_strlen($str, ‘UTF-8′);         //得到设定编码的字符串长度
+
+
+
+//也有这样用的
+
+   $content = iconv(”UTF-8″,”gbk//TRANSLIT”,$content);
+?>
+
+
+当时重点考察Python和Ruby，因为有豆瓣的先例，开始很倾向于Python，而且我那个时候对Python比较熟悉，还曾经痴迷过一段时间的wxPython，对Zope和plone也有一些研究。 货运代理
+
+但后来比较了Rails和Django之后，就倾向于Rails了，差距实在太大了，而且当时Django很不成熟，在很早期的版本。其实即便现在Django和Rails的差距也没有缩小过。
+
+但让我最终下定决心的是potian在05年就大规模使用Rails的实际工程经验，我曾经去杭州就我比较质疑的问题当面请教过他，和他谈过以后，就决定用Rails了。
+
+
+十、PHPExcel 處理插件
+
+http://www.thinkphp.cn/topic/53674.html參考文章
+
+phpstorm2018  http://www.oyksoft.com/soft/40722.html?pc=1
